@@ -1,26 +1,30 @@
 import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import PropTypes from "prop-types";
 
 //create your first component
-const Home = () => {
+const Home = props => {
 	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="simpleCounter">
+			<div className="numb">
+				<i className="far fa-clock"></i>
+			</div>
+			<div className="numb6">{props.numbSix % 10}</div>
+			<div className="numb5">{props.numbFive % 10}</div>
+			<div className="numb4">{props.numbFour % 10}</div>
+			<div className="numb3">{props.numbThree % 10}</div>
+			<div className="numb2">{props.numbTwo % 10}</div>
+			<div className="numb1">{props.numbOne % 10}</div>
 		</div>
 	);
 };
 
 export default Home;
+
+Home.propTypes = {
+	numbOne: PropTypes.number,
+	numbTwo: PropTypes.number,
+	numbThree: PropTypes.number,
+	numbFour: PropTypes.number,
+	numbFive: PropTypes.number,
+	numbSix: PropTypes.number
+};

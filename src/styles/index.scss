@@ -1,4 +1,29 @@
 @import "~bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+.simpleCounter{
+    text-align: center;
+    background: black;
+    color: white;
+    width: 1000px;
+    font-family: 'Abril Fatface', cursive;
+;
+    
+}
+.simpleCounter div{
+    display: inline-block;
+    font-size: 120px;
+    background: #1f1e1e;
+    color: white;
+    margin: 5px;
+    border-radius: 5%;
+    height: 200px;
+    width: 125px;
+    padding: 0;
+}
+
+
+
 
 /* 
 
